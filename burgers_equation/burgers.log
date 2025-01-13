@@ -1,0 +1,98 @@
+/home/hpcs_rnd/anaconda3/envs/Ravindra_env/lib/python3.9/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+Using backend: tensorflow.compat.v1
+Other supported backends: tensorflow, pytorch, jax, paddle.
+paddle supports more examples now and is recommended.
+WARNING:tensorflow:From /home/hpcs_rnd/anaconda3/envs/Ravindra_env/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+Enable just-in-time compilation with XLA.
+
+WARNING:tensorflow:From /home/hpcs_rnd/anaconda3/envs/Ravindra_env/lib/python3.9/site-packages/deepxde/nn/initializers.py:118: The name tf.keras.initializers.he_normal is deprecated. Please use tf.compat.v1.keras.initializers.he_normal instead.
+
+/home/hpcs_rnd/anaconda3/envs/Ravindra_env/lib/python3.9/site-packages/deepxde/nn/tensorflow_compat_v1/fnn.py:116: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  return tf.layers.dense(
+/home/hpcs_rnd/anaconda3/envs/Ravindra_env/lib/python3.9/site-packages/keras/legacy_tf_layers/core.py:261: UserWarning: `layer.apply` is deprecated and will be removed in a future version. Please use `layer.__call__` method instead.
+  return layer.apply(inputs)
+Compiling model...
+Building feed-forward neural network...
+'build' took 0.035917 s
+
+2024-07-12 18:53:31.683709: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-12 18:53:32.379719: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:39] Overriding allow_growth setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+2024-07-12 18:53:32.379854: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 36213 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:c8:00.0, compute capability: 8.0
+'compile' took 0.989757 s
+
+2024-07-12 18:53:32.752776: I tensorflow/compiler/xla/service/service.cc:171] XLA service 0x2ba5c0007620 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-07-12 18:53:32.752879: I tensorflow/compiler/xla/service/service.cc:179]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2024-07-12 18:53:32.761562: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:237] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2024-07-12 18:53:34.702452: I tensorflow/compiler/jit/xla_compilation_cache.cc:399] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+Training model...
+
+Step      Train loss                        Test loss                         Test metric
+0         [1.97e-02, 1.34e-01, 2.84e-01]    [1.97e-02, 1.34e-01, 2.84e-01]    []  
+1000      [3.59e-02, 9.94e-05, 4.83e-02]    [3.59e-02, 9.94e-05, 4.83e-02]    []  
+2000      [1.66e-02, 1.27e-04, 1.96e-02]    [1.66e-02, 1.27e-04, 1.96e-02]    []  
+3000      [5.80e-03, 5.73e-05, 4.34e-03]    [5.80e-03, 5.73e-05, 4.34e-03]    []  
+4000      [3.44e-03, 2.70e-05, 2.90e-03]    [3.44e-03, 2.70e-05, 2.90e-03]    []  
+5000      [2.67e-03, 2.14e-05, 2.22e-03]    [2.67e-03, 2.14e-05, 2.22e-03]    []  
+6000      [2.16e-03, 1.86e-05, 1.79e-03]    [2.16e-03, 1.86e-05, 1.79e-03]    []  
+7000      [1.80e-03, 1.67e-05, 1.48e-03]    [1.80e-03, 1.67e-05, 1.48e-03]    []  
+8000      [1.54e-03, 1.54e-05, 1.25e-03]    [1.54e-03, 1.54e-05, 1.25e-03]    []  
+9000      [1.34e-03, 1.42e-05, 1.06e-03]    [1.34e-03, 1.42e-05, 1.06e-03]    []  
+10000     [1.18e-03, 1.32e-05, 9.19e-04]    [1.18e-03, 1.32e-05, 9.19e-04]    []  
+11000     [1.05e-03, 1.17e-05, 8.13e-04]    [1.05e-03, 1.17e-05, 8.13e-04]    []  
+12000     [9.62e-04, 1.11e-05, 7.27e-04]    [9.62e-04, 1.11e-05, 7.27e-04]    []  
+13000     [8.57e-04, 9.68e-06, 6.57e-04]    [8.57e-04, 9.68e-06, 6.57e-04]    []  
+14000     [7.79e-04, 8.57e-06, 5.97e-04]    [7.79e-04, 8.57e-06, 5.97e-04]    []  
+15000     [7.27e-04, 6.72e-06, 5.40e-04]    [7.27e-04, 6.72e-06, 5.40e-04]    []  
+
+Best model at step 15000:
+  train loss: 1.27e-03
+  test loss: 1.27e-03
+  test metric: []
+
+'train' took 17.528772 s
+
+Compiling model...
+'compile' took 0.161411 s
+
+2024-07-12 18:53:50.382880: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1658] (One-time warning): Not using XLA:CPU for cluster.
+
+If you want XLA:CPU, do one of the following:
+
+ - set the TF_XLA_FLAGS to include "--tf_xla_cpu_global_jit", or
+ - set cpu_global_jit to true on this session's OptimizerOptions, or
+ - use experimental_jit_scope, or
+ - use tf.function(jit_compile=True).
+
+To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a
+proper command-line flag, not via TF_XLA_FLAGS).
+Training model...
+
+Step      Train loss                        Test loss                         Test metric
+15000     [7.27e-04, 6.72e-06, 5.40e-04]    [7.27e-04, 6.72e-06, 5.40e-04]    []  
+16000     [1.44e-04, 8.84e-07, 6.67e-05]    [1.44e-04, 8.84e-07, 6.67e-05]        
+17000     [6.99e-05, 3.90e-07, 3.17e-05]    [6.99e-05, 3.90e-07, 3.17e-05]        
+18000     [3.96e-05, 2.80e-07, 1.07e-05]    [3.96e-05, 2.80e-07, 1.07e-05]        
+19000     [2.35e-05, 1.16e-07, 6.04e-06]    [2.35e-05, 1.16e-07, 6.04e-06]        
+20000     [1.78e-05, 1.25e-07, 2.66e-06]    [1.78e-05, 1.25e-07, 2.66e-06]        
+20571     [1.42e-05, 1.03e-07, 2.37e-06]    [1.42e-05, 1.03e-07, 2.37e-06]    []  
+
+Best model at step 20571:
+  train loss: 1.67e-05
+  test loss: 1.67e-05
+  test metric: []
+
+'train' took 20.064987 s
+
+Saving loss history to /home/hpcs_rnd/RAVINDRA_IISc/burgers_equation/loss.dat ...
+Saving training data to /home/hpcs_rnd/RAVINDRA_IISc/burgers_equation/train.dat ...
+Saving test data to /home/hpcs_rnd/RAVINDRA_IISc/burgers_equation/test.dat ...
+Mean residual: 0.0043515624
+L2 relative error: 0.003343091474579127
+correlation coefficient: 0.999994541575113
+Mean Absolute Error (MAE): 0.0005692658886366058
+Root Mean Squared Error (RMSE): 0.002053786505418872
+R-squared: 0.9999888237393926
